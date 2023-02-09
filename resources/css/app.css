@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "CairoBold";
+    src: url("font/Cairo-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "CairoLight";
+    src: url("font/Cairo-Light.ttf") format("truetype");
+  }
