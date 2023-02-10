@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="rtl">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
@@ -10,6 +10,9 @@
 
     @livewireStyles
     <style>
+         html {
+            direction:rtl;
+        }
         button {
             font-family: "CairoBold", sans-serif;
         }

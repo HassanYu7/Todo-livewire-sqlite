@@ -11,6 +11,10 @@ class Todo extends Component
     public $todoText = "";
 
 
+    protected $rules = [
+        'todoText' => 'required|min:5',
+    ];
+
     public function mount()
     {
         $this->selectItems();
@@ -24,15 +28,16 @@ class Todo extends Component
     public function addItem()
     {
 
+        $this->validate();
         $items = new TodoItem();
         $items->todo = $this->todoText;
-
-
+        
+        
         if ($items->todo == '') {
             return;
         }
-
-
+        
+        
         $items->completed = false;
         $items->save();
 
